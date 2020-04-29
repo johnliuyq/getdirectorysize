@@ -53,7 +53,7 @@ def main(basedir):
             except:
                 pass
         results = sorted(directory_size, key=lambda x: x[1], reverse=True)  # return a list ordered by size
-        results = [[i[0], '文件夹大小：' + str(i[1]) + ' Mb'] for i in results]
+        results = [[i[0], 'file size: ' + str(i[1]) + ' Mb'] for i in results]
  
         with open(basedir + os.sep + datetime.date.today().isoformat() + '.txt', 'a+') as f:
             for result in results:
